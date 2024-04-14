@@ -30,7 +30,7 @@ window.onload = function () {
 
   function startTimer() {
     return setInterval(() => {
-      if (!game) return;
+      if (!game || game.gameIsOver) return;
       const minutes = Math.floor(game.timeRemaining / 60)
         .toString()
         .padStart(2, "0");

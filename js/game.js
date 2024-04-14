@@ -10,7 +10,7 @@ class Game {
     this.deathToll = 0;
     this.score = 0;
     this.gameIsOver = false;
-    this.timeRemaining = 30;
+    this.timeRemaining = 60;
     this.gameLoopFrequency = Math.round(1000 / 60); // 60fps
   }
 
@@ -91,5 +91,8 @@ class Game {
     this.gameScreen.style.display = "none";
     // Show end game screen
     this.gameEndScreen.style.display = "block";
+
+    const timeRemainingContainer = document.getElementById("timeRemaining");
+    timeRemainingContainer.innerText = `00:00`;
   }
 }

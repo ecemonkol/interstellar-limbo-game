@@ -32,3 +32,8 @@ body {
   overflow: hidden;
   position: relative;
 }
+
+#game-screen p,
+#game-screen div {
+  margin: 5px 0;
+}
