@@ -16,7 +16,7 @@ class Player {
     this.element.style.height = `${this.height}px`;
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.backgroundColor = "tomato";
+    this.element.style.backgroundColor = "#0b3d91";
 
     this.gameScreen.appendChild(this.element);
   }
@@ -26,10 +26,10 @@ class Player {
     this.left += this.directionX;
 
     if (this.left < 0) {
-      this.left = 0;
+      this.left = 8;
     }
-    if (this.left > 740) {
-      this.left = 740;
+    if (this.left > 736) {
+      this.left = 732;
     }
 
     console.log("move");

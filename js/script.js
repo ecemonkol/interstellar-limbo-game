@@ -40,7 +40,6 @@ window.onload = function () {
       timeRemainingContainer.innerText = `${minutes}:${seconds}`;
 
       game.timeRemaining--;
-      console.log(game.timeRemaining, "startfunction ici");
       if (game.timeRemaining <= 0) {
         clearInterval(timer);
       }
@@ -58,10 +57,10 @@ window.onload = function () {
     const key = event.key;
     switch (key) {
       case "ArrowLeft":
-        game.player.directionX = -12;
+        game.player.directionX = -10;
         break;
       case "ArrowRight":
-        game.player.directionX = 12;
+        game.player.directionX = 10;
         break;
     }
   });

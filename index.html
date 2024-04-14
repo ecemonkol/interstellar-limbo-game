@@ -4,26 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Slackside+One&family=Trispace:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/galactic" rel="stylesheet" />
 
-    <title>Save the Duck!</title>
+    <title>Interstellar Limbo!</title>
   </head>
   <body>
     <div id="game-intro">
-      <p>hello this is intro</p>
+      <p class="text" id="game-name">Interstellar <br />Limbo</p>
+      <p></p>
+      <p>Left and right arrow keys to move</p>
+      <p>-</p>
+      <p>Collect as many artifacts as you can</p>
+      <p>-</p>
+      <p>You have 60 seconds</p>
       <button id="start-button">start</button>
     </div>
+
     <div id="game-container">
-      <div id="game-screen">
-        <p>hello this is the game screen</p>
+      <div id="time-score">
+        <p>Score:<span id="score">0</span></p>
+        <!-- <p>Deathtoll:<spa id="death-toll">0</spa></p> -->
+        <div id="timeRemaining"><span>00:00</span></div>
       </div>
-      <div>
-        <p>Score:<spa id="score">0</spa></p>
-        <p>Deathtoll:<spa id="death-toll">0</spa></p>
-        <div id="timeRemaining">Remaining Time: <span>00:00</span></div>
-      </div>
+
+      <div id="game-screen"></div>
     </div>
     <div id="game-end">
-      <p>game over bye</p>
       <button id="restart-button">restart</button>
     </div>
 

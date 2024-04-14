@@ -3,8 +3,8 @@ class Obstacle {
     this.gameScreen = gameScreen;
     this.left = this.left = Math.floor(Math.random() * 900);
     this.top = 0;
-    this.width = 45;
-    this.height = 80;
+    this.width = 20;
+    this.height = 50;
     this.element = document.createElement("div");
 
     this.element.style.backgroundColor = "violet";

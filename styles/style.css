@@ -1,15 +1,20 @@
 body {
   padding: 0;
   text-align: center;
-  overflow: hidden;
+  background-image: url(../images/cluster.jpg);
+  background-repeat: no-repeat;
 }
 
 #game-intro {
+  margin-top: 100px;
   padding: 20px 0px;
+  color: white;
+  font-size: 15px;
+  font-family: "Trispace", sans-serif;
 }
 
 #game-container {
-  display: flex;
+  display: grid;
   width: 100vw;
   padding: 20px 0px;
   justify-content: center;
@@ -21,19 +26,72 @@ body {
   padding: 20px 0px;
   overflow: hidden;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.971);
-  /* background-color: #7cb4f7; */
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid white;
 }
 
 #game-end {
   display: none;
-  align-content: center;
-  padding: 20px 0px;
-  overflow: hidden;
-  position: relative;
 }
 
-#game-screen p,
-#game-screen div {
-  margin: 5px 0;
+#time-score {
+  display: none;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Trispace", sans-serif;
+  font-size: 34px;
+  color: white;
+}
+
+#timeRemaining {
+  text-align: center;
+  margin-top: 35px;
+}
+
+#score {
+  text-align: center;
+}
+
+#game-name {
+  font-size: 65px;
+  font-family: "Galactic", sans-serif;
+  color: violet;
+  animation: floatAnimation 3s ease-in-out infinite alternate;
+}
+
+.logo-img {
+  width: 350px;
+}
+
+.arrows-img {
+  width: 150px;
+}
+
+body button {
+  font-size: 25px;
+  background-color: transparent;
+  color: #0b3d91;
+  padding: 10px 32px;
+  border: 2px solid #0b3d91;
+  box-shadow: 0;
+  /* border-radius: 5px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Trispace", sans-serif;
+}
+
+body button:hover {
+  border: 2px solid rgb(255, 253, 253);
+  color: rgb(255, 253, 253);
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
