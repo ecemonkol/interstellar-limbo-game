@@ -8,8 +8,7 @@ body {
 #game-intro {
   margin-top: 100px;
   padding: 20px 0px;
-  color: white;
-  font-size: 15px;
+
   font-family: "Trispace", sans-serif;
 }
 
@@ -27,12 +26,24 @@ body {
   overflow: hidden;
   position: relative;
   background-color: rgba(0, 0, 0, 0.3);
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid white;
   border-bottom: 1px solid white;
+}
+
+.instructions {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.2rem;
 }
 
 #game-end {
   display: none;
+  margin-top: 200px;
+}
+
+#game-end-won {
+  display: none;
+  margin-top: 200px;
 }
 
 #time-score {
@@ -45,6 +56,21 @@ body {
   color: white;
 }
 
+.text {
+  font-family: "Trispace", sans-serif;
+  font-size: 34px;
+  color: white;
+}
+
+.text-mini {
+  font-family: "Trispace", sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+#black-hole {
+  height: 300px;
+}
 #timeRemaining {
   text-align: center;
   margin-top: 35px;
@@ -55,7 +81,7 @@ body {
 }
 
 #game-name {
-  font-size: 65px;
+  font-size: 75px;
   font-family: "Galactic", sans-serif;
   color: violet;
   animation: floatAnimation 3s ease-in-out infinite alternate;
@@ -72,9 +98,9 @@ body {
 body button {
   font-size: 25px;
   background-color: transparent;
-  color: #0b3d91;
+  color: #3654ff;
   padding: 10px 32px;
-  border: 2px solid #0b3d91;
+  border: 2px solid #3654ff;
   box-shadow: 0;
   /* border-radius: 5px; */
   margin-top: 20px;

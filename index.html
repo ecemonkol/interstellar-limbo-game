@@ -17,12 +17,14 @@
   <body>
     <div id="game-intro">
       <p class="text" id="game-name">Interstellar <br />Limbo</p>
-      <p></p>
-      <p>Left and right arrow keys to move</p>
-      <p>-</p>
-      <p>Collect as many artifacts as you can</p>
-      <p>-</p>
-      <p>You have 60 seconds</p>
+      <div class="instructions">
+        <p>Left and right arrow keys to move</p>
+        <p>-</p>
+        <p>Collect as many artifacts as you can</p>
+        <p>-</p>
+        <p>You have 60 seconds</p>
+      </div>
+
       <button id="start-button">start</button>
     </div>
 
@@ -36,10 +38,18 @@
       <div id="game-screen"></div>
     </div>
     <div id="game-end">
+      <p class="text">Game Over</p>
+      <p class="text-mini">Your Score:<span id="final-score">0</span></p>
+      <p class="text-mini">You are trapped in multidimensional chaos...</p>
+      <!-- <img id="black-hole" src="images/blackhole.png" alt="" /> -->
+      <button id="restart-button">restart</button>
+    </div>
+    <div id="game-end-won">
+      <p class="text">You Won!</p>
       <button id="restart-button">restart</button>
     </div>
 
-    <script type="text/javascript" src="js/duck.js"></script>
+    <script type="text/javascript" src="js/obstacle.js"></script>
     <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
     <script type="text/javascript" src="js/script.js"></script>

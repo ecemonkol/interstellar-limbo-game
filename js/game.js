@@ -3,6 +3,7 @@ class Game {
     this.startScreen = document.getElementById("game-intro");
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
+    this.gameEndWinnerScreen = document.getElementById("game-end-won");
     this.timeAndScore = document.getElementById("time-score");
     this.player = new Player(this.gameScreen, 350, 450, 160, 25);
     this.height = 450;
@@ -13,9 +14,6 @@ class Game {
     this.gameIsOver = false;
     this.timeRemaining = 60;
     this.gameLoopFrequency = Math.round(1000 / 60); // 60fps
-    this.collisionSound = new Audio(
-      "sounds/mixkit-sci-fi-positive-notification-266.wav"
-    );
   }
 
   gameLoop() {
@@ -72,6 +70,9 @@ class Game {
     scoreEl.textContent = this.score;
     // deathTollEl.textContent = this.deathToll;
 
+    const finalScoreEl = document.getElementById("final-score");
+    finalScoreEl.textContent = this.score;
+
     if (this.height < 30) {
       this.endGame();
     }
@@ -95,8 +96,16 @@ class Game {
     this.gameIsOver = true;
     // Hide game screen
     this.gameScreen.style.display = "none";
+
+    this.timeAndScore.style.display = "none";
+
     // Show end game screen
-    this.gameEndScreen.style.display = "block";
+    if (this.height >= 30) {
+      // Player won
+      this.gameEndWinnerScreen.style.display = "block";
+    } else {
+      this.gameEndScreen.style.display = "block";
+    }
 
     const timeRemainingContainer = document.getElementById("timeRemaining");
     timeRemainingContainer.innerText = `00:00`;

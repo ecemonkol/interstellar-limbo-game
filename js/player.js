@@ -16,7 +16,7 @@ class Player {
     this.element.style.height = `${this.height}px`;
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.backgroundColor = "#0b3d91";
+    this.element.style.backgroundColor = "#3654ff";
 
     this.gameScreen.appendChild(this.element);
   }
