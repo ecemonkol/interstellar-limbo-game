@@ -3,6 +3,7 @@ body {
   text-align: center;
   background-image: url(../images/cluster.jpg);
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #game-intro {
@@ -60,6 +61,7 @@ body {
   font-family: "Trispace", sans-serif;
   font-size: 70px;
   color: violet;
+  font-weight: 1200px;
 }
 
 .text-mini {

@@ -13,7 +13,7 @@ class Game {
     this.deathToll = 0;
     this.score = 0;
     this.gameIsOver = false;
-    this.timeRemaining = 4;
+    this.timeRemaining = 60;
     this.gameLoopFrequency = Math.round(1000 / 60); // 60fps
   }
 
@@ -53,7 +53,10 @@ class Game {
         this.obstacles.splice(i, 1);
         this.score++;
         i--;
-        this.collisionSound().play();
+        const soundCatch = new Audio(
+          `sounds/mixkit-sci-fi-positive-notification-266.wav`
+        );
+        soundCatch.play();
       } else if (obstacle.top > this.height) {
         this.deathToll++;
         obstacle.element.remove();
@@ -107,7 +110,7 @@ class Game {
       // Player won
       this.result.textContent = "You Won!";
       this.resultText.textContent =
-        "You have navigated the multiverse and escaped the chaos..";
+        "Victorious! You've escaped the multiverse chaos";
     }
 
     const timeRemainingContainer = document.getElementById("timeRemaining");
