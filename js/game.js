@@ -10,7 +10,7 @@ class Game {
     this.height = 450;
     this.width = 900;
     this.obstacles = [];
-    this.deathToll = 0;
+    this.missingItems = 0;
     this.score = 0;
     this.gameIsOver = false;
     this.timeRemaining = 30;
@@ -18,9 +18,6 @@ class Game {
   }
 
   gameLoop() {
-    console.log("in the game loop");
-    console.log(this.timeRemaining, "game.jsicinde");
-
     this.update();
 
     if (this.gameIsOver) {
@@ -58,21 +55,19 @@ class Game {
         );
         soundCatch.play();
       } else if (obstacle.top > this.height) {
-        this.deathToll++;
+        this.missingItems++;
         obstacle.element.remove();
         this.obstacles.splice(i, 1);
         i--;
       }
     }
 
-    this.height = 450 - this.deathToll * 10;
+    this.height = 450 - this.missingItems * 10;
     this.gameScreen.style.height = `${this.height}px`;
-    this.player.top = 450 - this.deathToll * 10;
+    this.player.top = 450 - this.missingItems * 10;
 
     const scoreEl = document.getElementById("score");
-    // const deathTollEl = document.getElementById("death-toll");
     scoreEl.textContent = this.score;
-    // deathTollEl.textContent = this.deathToll;
 
     const finalScoreEl = document.getElementById("final-score");
     finalScoreEl.textContent = this.score;
