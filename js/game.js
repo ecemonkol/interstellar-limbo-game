@@ -80,7 +80,6 @@ class Game {
       this.endGame();
     }
 
-    console.log(this.obstacles);
     if (Math.random() > 0.89 && this.obstacles.length < 3) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }

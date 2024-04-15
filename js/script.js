@@ -19,10 +19,8 @@ window.onload = function () {
     if (timer) clearInterval(timer);
 
     timer = startTimer();
-    console.log(game.timeRemaining);
   }
   function restartGame() {
-    console.log("start game");
     restartTimer();
     location.reload();
   }
