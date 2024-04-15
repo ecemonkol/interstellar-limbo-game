@@ -6,7 +6,7 @@ Welcome to Interstellar Limbo! Inspired by the vastness of space and the themes 
 
 - **Controls:** Use the **left** and **right** arrow keys to move.
 - **Objective:** Navigate through the multidimensional chaos by catching items falling from the cosmos. Each catch increases your score, while missing items causes the screen to shrink, making it harder to survive.
-- **Time Limit:** You have 60 seconds to survive the chaos and achieve the highest score possible.
+- **Time Limit:** You have 30 seconds to survive the chaos and achieve the highest score possible.
 
 ## Game Elements
 
