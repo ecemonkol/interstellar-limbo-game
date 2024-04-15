@@ -3,8 +3,9 @@ class Game {
     this.startScreen = document.getElementById("game-intro");
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
-    this.gameEndWinnerScreen = document.getElementById("game-end-won");
     this.timeAndScore = document.getElementById("time-score");
+    this.result = document.getElementById("result");
+    this.resultText = document.getElementById("result-text");
     this.player = new Player(this.gameScreen, 350, 450, 160, 25);
     this.height = 450;
     this.width = 900;
@@ -12,7 +13,7 @@ class Game {
     this.deathToll = 0;
     this.score = 0;
     this.gameIsOver = false;
-    this.timeRemaining = 60;
+    this.timeRemaining = 4;
     this.gameLoopFrequency = Math.round(1000 / 60); // 60fps
   }
 
@@ -99,12 +100,14 @@ class Game {
 
     this.timeAndScore.style.display = "none";
 
+    this.gameEndScreen.style.display = "block";
+
     // Show end game screen
     if (this.height >= 30) {
       // Player won
-      this.gameEndWinnerScreen.style.display = "block";
-    } else {
-      this.gameEndScreen.style.display = "block";
+      this.result.textContent = "You Won!";
+      this.resultText.textContent =
+        "You have navigated the multiverse and escaped the chaos..";
     }
 
     const timeRemainingContainer = document.getElementById("timeRemaining");
