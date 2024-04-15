@@ -26,9 +26,10 @@ body {
   padding: 20px 0px;
   overflow: hidden;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  /* box-shadow: 0 0 30px 4px rgb(210, 86, 41); */
 }
 
 .instructions {

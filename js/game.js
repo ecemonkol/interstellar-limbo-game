@@ -13,7 +13,7 @@ class Game {
     this.deathToll = 0;
     this.score = 0;
     this.gameIsOver = false;
-    this.timeRemaining = 60;
+    this.timeRemaining = 30;
     this.gameLoopFrequency = Math.round(1000 / 60); // 60fps
   }
 
@@ -65,9 +65,9 @@ class Game {
       }
     }
 
-    this.height = 450 - this.deathToll * 4;
+    this.height = 450 - this.deathToll * 10;
     this.gameScreen.style.height = `${this.height}px`;
-    this.player.top = 450 - this.deathToll * 4;
+    this.player.top = 450 - this.deathToll * 10;
 
     const scoreEl = document.getElementById("score");
     // const deathTollEl = document.getElementById("death-toll");
