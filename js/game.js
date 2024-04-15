@@ -14,7 +14,7 @@ class Game {
     this.score = 0;
     this.gameIsOver = false;
     this.timeRemaining = 30;
-    this.gameLoopFrequency = Math.round(1000 / 60); // 60fps
+    this.gameLoopFrequency = Math.round(1000 / 60);
   }
 
   gameLoop() {
@@ -95,12 +95,11 @@ class Game {
     this.gameIsOver = true;
     // Hide game screen
     this.gameScreen.style.display = "none";
-
     this.timeAndScore.style.display = "none";
-
+    // Show game screen
     this.gameEndScreen.style.display = "block";
 
-    // Show end game screen
+    // Winning or losing screen
     if (this.height >= 30) {
       // Player won
       this.result.textContent = "You Won!";

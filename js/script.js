@@ -15,8 +15,7 @@ window.onload = function () {
   function startGame() {
     game = new Game();
     game.start();
-    console.log("start game");
-    console.log("hello malatya");
+
     if (timer) clearInterval(timer);
 
     timer = startTimer();

@@ -18,6 +18,7 @@ body {
   width: 100vw;
   padding: 20px 0px;
   justify-content: center;
+  margin-top: 60px;
 }
 
 #game-screen {
@@ -39,12 +40,7 @@ body {
 
 #game-end {
   display: none;
-  margin-top: 200px;
-}
-
-#game-end-won {
-  display: none;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 #time-score {
