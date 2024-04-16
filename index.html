@@ -11,12 +11,6 @@
       rel="stylesheet"
     />
     <link href="https://fonts.cdnfonts.com/css/galactic" rel="stylesheet" />
-    <audio
-      id="background-music"
-      \
-      src="sounds/interstellar-space-117482.mp3"
-      loop
-    ></audio>
     <title>Interstellar Limbo!</title>
   </head>
   <body>
@@ -50,10 +44,22 @@
       <p class="text-mini">score:<span id="final-score">0</span></p>
       <button id="restart-button">restart</button>
     </div>
+    <audio
+      id="soundtrack"
+      src="sounds/interstellar-space-117482.mp3"
+      preload="auto"
+      loop
+    ></audio>
 
     <script type="text/javascript" src="js/obstacle.js"></script>
     <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script>
+      document.body.addEventListener("click", function () {
+        var audio = document.getElementById("soundtrack");
+        audio.play();
+      });
+    </script>
   </body>
 </html>

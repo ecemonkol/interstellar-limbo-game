@@ -22,7 +22,6 @@ class Player {
   }
 
   move() {
-    console.log(this.directionX);
     this.left += this.directionX;
 
     if (this.left < 0) {
@@ -31,8 +30,6 @@ class Player {
     if (this.left > 736) {
       this.left = 732;
     }
-
-    console.log("move");
     this.updatePosition();
   }
 
