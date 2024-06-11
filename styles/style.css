@@ -41,6 +41,8 @@ body {
 #game-end {
   display: none;
   margin-top: 150px;
+  font-family: "Trispace", sans-serif;
+  font-weight: bolder;
 }
 
 #time-score {
@@ -58,6 +60,7 @@ body {
   font-size: 70px;
   color: violet;
   font-weight: 1200px;
+  display: inline-block;
 }
 
 .text-mini {
@@ -100,15 +103,32 @@ body button {
   padding: 10px 32px;
   border: 2px solid #3654ff;
   box-shadow: 0;
-  /* border-radius: 5px; */
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: "Trispace", sans-serif;
+  animation: flash 1s infinite;
 }
 
-body button:hover {
-  border: 2px solid rgb(255, 253, 253);
+@keyframes flash {
+  0% {
+    border-color: #3654ff;
+    color: #3654ff;
+  }
+  50% {
+    border-color: violet;
+    color: violet;
+  }
+  100% {
+    border-color: #3654ff;
+    color: #3654ff;
+  }
+}
+
+button:hover {
+  border-color: rgb(255, 253, 253);
   color: rgb(255, 253, 253);
+  box-shadow: 0 0 10px white, 0 0 20px white;
+  animation: none; /* Stops the flashing animation on hover */
 }
 
 @keyframes floatAnimation {
@@ -116,6 +136,6 @@ body button:hover {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-2px);
   }
 }
